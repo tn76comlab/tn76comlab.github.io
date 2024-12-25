@@ -9,11 +9,13 @@
     <title>404 - redirect to tn76.com</title>
 
     <script>
-        const pathname = window.location.pathname;
+        const pathname = window.location.pathname.substring(1);
+        console.log("pathname: " + pathname);
+
         const redirectUrl = `/#${pathname}`;
         window.location.replace(redirectUrl);
-      </script>
-      
+    </script>
+
 
 </head>
 
